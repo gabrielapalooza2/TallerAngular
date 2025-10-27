@@ -1,11 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { SeriesListComponent } from './series/series-list/component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [SeriesListComponent],
   templateUrl: './app.html',
-  standalone: false,
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
-export class App {
-  protected readonly title = signal('taller-angular');
-}
+export class AppComponent {}
